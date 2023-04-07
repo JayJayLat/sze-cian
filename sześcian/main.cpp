@@ -23,12 +23,12 @@ std::string wczytajShader(std::string path)
 GLfloat vektory[]
 {
     //x     y     z
-    //     dó³
+    //     dÃ³Â³
      -0.25f, 0.0f, 0.25f,  //0
       0.25f, 0.0f, 0.25f,  //1
      -0.25f, 0.0f, -0.25f, //2
       0.25f, 0.0f, -0.25f, //3
-   //      góra   
+   //      gÃ³ra   
       -0.25f, 0.5f, 0.25f, //4
       0.25f, 0.5f, 0.25f,  //5
      -0.25f, 0.5f, -0.25f, //6
@@ -37,10 +37,10 @@ GLfloat vektory[]
 
 GLuint indeksy[]
 {
-    //dó³
+    //dÃ³Â³
     0, 1, 2,
     1, 2, 3,
-    //góra
+    //gÃ³ra
     4, 5, 6,
     5, 6, 7,
     //lewo
@@ -49,15 +49,15 @@ GLuint indeksy[]
     //prawo
     1, 2, 5,
     2, 5, 6,
-    //przód
+    //przÃ³d
     0, 1, 4,
     1, 5, 4,
-    //ty³
+    //tyÂ³
     2, 3, 7,
     2, 6, 7
 };
 
-int main(void)
+int main()
 {
 
     if (!glfwInit())
@@ -88,7 +88,7 @@ int main(void)
     //przygotowanie do rysowania cube'a
     glViewport(0, 0, 800, 600);
 
-    //wczytanie kodu shaderów
+    //wczytanie kodu shaderÃ³w
     std::string vertexCode = wczytajShader("shader.vert");
     std::string fragmentCode = wczytajShader("shader.frag");
     const char* vertexSource = vertexCode.c_str();
@@ -149,7 +149,7 @@ int main(void)
 
     std::cout << glGetError() << std::endl;
 
-    //inicjalizacja zmiennych zwi¹zanych z rotacj¹
+    //inicjalizacja zmiennych zwiÂ¹zanych z rotacjÂ¹
     float rotacja = 0.0f;
 
     glEnable(GL_DEPTH_TEST);
